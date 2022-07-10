@@ -11,6 +11,8 @@ async def start(client,message):
 
 	__I am <b>ѕτєνє</b>,A Powerfull file renamer bot, Please sentd any telegram 
 	**Document Or Video** and enter new filename and rename it__
+	
+	<b>🔆 𝐌𝐘 𝐎𝐖𝐍𝐄𝐑 </b> : <a href=https://t.me/themastertheblaster>❣️ ∂εcσ∂εɾ รεεɱαɳ ❣️</a></b>
 	""",reply_to_message_id = message.message_id ,  
 	reply_markup=InlineKeyboardMarkup([[
           InlineKeyboardButton("🎯 Support 🎯" ,url="https://t.me/Mkv_blasters"), 
