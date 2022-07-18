@@ -19,7 +19,7 @@ async def rename(bot,update):
 	user_id = update.message.chat.id
 	date = update.message.date
 	await update.message.delete()
-	await update.message.reply_text("__𝙋𝙡𝙚𝙖𝙨𝙚 𝙎𝙚𝙣𝙙 𝙏𝙝𝙚 𝙉𝙚𝙬 𝙁𝙞𝙡𝙚 𝙉𝙖𝙢𝙚...__",	
+	await update.message.reply_text("● 𝙋𝙡𝙚𝙖𝙨𝙚 𝙎𝙚𝙣𝙙 𝙏𝙝𝙚 𝙉𝙚𝙬 𝙁𝙞𝙡𝙚 𝙉𝙖𝙢𝙚...",	
 	reply_to_message_id=update.message.reply_to_message.message_id,  
 	reply_markup=ForceReply(True))
 	
