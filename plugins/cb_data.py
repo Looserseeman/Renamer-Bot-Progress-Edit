@@ -19,7 +19,7 @@ async def rename(bot,update):
 	user_id = update.message.chat.id
 	date = update.message.date
 	await update.message.delete()
-	await update.message.reply_text("__Please enter the new filename...__",	
+	await update.message.reply_text("__𝙋𝙡𝙚𝙖𝙨𝙚 𝙎𝙚𝙣𝙙 𝙏𝙝𝙚 𝙉𝙚𝙬 𝙁𝙞𝙡𝙚 𝙉𝙖𝙢𝙚...__",	
 	reply_to_message_id=update.message.reply_to_message.message_id,  
 	reply_markup=ForceReply(True))
 	
@@ -30,7 +30,7 @@ async def doc(bot,update):
      new_filename = name[1]
      file_path = f"downloads/{new_filename}"
      file = update.message.reply_to_message
-     ms = await update.message.edit("``` Trying To Download...```")
+     ms = await update.message.edit("```📥 𝙏𝙧𝙮𝙞𝙣𝙜 𝙏𝙤 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 📥```")
      c_time = time.time()
      try:
      	path = await bot.download_media(message = file, progress=progress_for_pyrogram,progress_args=( "``` Trying To Download...```",  ms, c_time   ))
@@ -51,7 +51,7 @@ async def doc(bot,update):
      		img.resize((320, 320))
      		img.save(ph_path, "JPEG")
      		c_time = time.time()
-     		await ms.edit("```Trying To Uploading```")
+     		await ms.edit("```📤 𝙏𝙧𝙮𝙞𝙣𝙜 𝙏𝙤 𝙐𝙥𝙡𝙤𝙖𝙙 📤```")
      		c_time = time.time()
      		try:
      			await bot.send_document(update.message.chat.id,document = file_path,thumb=ph_path,caption = f"**{new_filename}**",progress=progress_for_pyrogram,progress_args=( "```Trying To Uploading```",  ms, c_time   ))
@@ -64,7 +64,7 @@ async def doc(bot,update):
      			os.remove(ph_path)
      			     		     		
      else:
-     		await ms.edit("```Trying To Uploading```")
+     		await ms.edit("```📤 𝙏𝙧𝙮𝙞𝙣𝙜 𝙏𝙤 𝙐𝙥𝙡𝙤𝙖𝙙 📤```")
      		c_time = time.time()
      		try:
      			await bot.send_document(update.message.chat.id,document = file_path,caption = f"**{new_filename}**",progress=progress_for_pyrogram,progress_args=( "```Trying To Uploading```",  ms, c_time   ))
@@ -82,7 +82,7 @@ async def vid(bot,update):
      new_filename = name[1]
      file_path = f"downloads/{new_filename}"
      file = update.message.reply_to_message
-     ms = await update.message.edit("``` Trying To Download...```")
+     ms = await update.message.edit("```📥 𝙏𝙧𝙮𝙞𝙣𝙜 𝙏𝙤 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 📥```")
      c_time = time.time()
      try:
      	path = await bot.download_media(message = file, progress=progress_for_pyrogram,progress_args=( "``` Trying To Download...```",  ms, c_time   ))
@@ -107,7 +107,7 @@ async def vid(bot,update):
      		img.resize((320, 320))
      		img.save(ph_path, "JPEG")
      		c_time = time.time()
-     		await ms.edit("```Trying To Uploading```")
+     		await ms.edit("```📤 𝙏𝙧𝙮𝙞𝙣𝙜 𝙏𝙤 𝙐𝙥𝙡𝙤𝙖𝙙 📤```")
      		c_time = time.time()
      		try:
      			await bot.send_video(update.message.chat.id,video = file_path,caption = f"**{new_filename}**",thumb=ph_path,duration =duration, progress=progress_for_pyrogram,progress_args=( "```Trying To Uploading```",  ms, c_time   ))
@@ -120,7 +120,7 @@ async def vid(bot,update):
      				os.remove(ph_path)
      				
      else:
-     		await ms.edit("```Trying To Uploading```")
+     		await ms.edit("```📤 𝙏𝙧𝙮𝙞𝙣𝙜 𝙏𝙤 𝙐𝙥𝙡𝙤𝙖𝙙 📤```")
      		c_time = time.time()
      		try:
      			await bot.send_video(update.message.chat.id,video = file_path,caption = f"**{new_filename}**",duration = duration, progress=progress_for_pyrogram,progress_args=( "```Trying To Uploading```",  ms, c_time   ))
@@ -138,7 +138,7 @@ async def aud(bot,update):
      new_filename = name[1]
      file_path = f"downloads/{new_filename}"
      file = update.message.reply_to_message
-     ms = await update.message.edit("``` Trying To Download...```")
+     ms = await update.message.edit("```📥 𝙏𝙧𝙮𝙞𝙣𝙜 𝙏𝙤 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 📥```")
      c_time = time.time()
      try:
      	path = await bot.download_media(message = file , progress=progress_for_pyrogram,progress_args=( "``` Trying To Download...```",  ms, c_time   ))
@@ -161,7 +161,7 @@ async def aud(bot,update):
      		img = Image.open(ph_path)
      		img.resize((320, 320))
      		img.save(ph_path, "JPEG")
-     		await ms.edit("```Trying To Uploading```")
+     		await ms.edit("```📤 𝙏𝙧𝙮𝙞𝙣𝙜 𝙏𝙤 𝙐𝙥𝙡𝙤𝙖𝙙 📤```")
      		c_time = time.time()
      		try:
      			await bot.send_audio(update.message.chat.id,audio = file_path,caption = f"**{new_filename}**",thumb=ph_path,duration =duration, progress=progress_for_pyrogram,progress_args=( "```Trying To Uploading```",  ms, c_time   ))
@@ -173,7 +173,7 @@ async def aud(bot,update):
      			os.remove(file_path)
      			os.remove(ph_path)
      else:
-     		await ms.edit("```Trying To Uploading```")
+     		await ms.edit("```📤 𝙏𝙧𝙮𝙞𝙣𝙜 𝙏𝙤 𝙐𝙥𝙡𝙤𝙖𝙙 📤```")
      		c_time = time.time()
      		try:
      			await bot.send_audio(update.message.chat.id,audio = file_path,caption = f"**{new_filename}**",duration = duration, progress=progress_for_pyrogram,progress_args=( "```Trying To Uploading```",  ms, c_time   ))
