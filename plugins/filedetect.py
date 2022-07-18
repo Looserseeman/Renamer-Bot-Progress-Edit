@@ -45,7 +45,7 @@ async def refunc(client,message):
         			,InlineKeyboardButton("<b>🎥 Video 🎥</b>",callback_data = "vid") ]])
         		elif mime == "audio":
         			markup = InlineKeyboardMarkup([[ InlineKeyboardButton("<b>📚 Documents 📚</b>",callback_data = "doc")
-        			,InlineKeyboardButton("🎵 audio",callback_data = "aud") ]])
+        			,InlineKeyboardButton("🎵 Audio",callback_data = "aud") ]])
         		else:
         			markup = InlineKeyboardMarkup([[ InlineKeyboardButton("<b>📚 Documents 📚</b>",callback_data = "doc") ]])
         		# dont chenge this message.reply_text 
